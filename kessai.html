@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>決済方法選択画面</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/kessai01.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- ここからヘッダー -->
+        <div id="header">
+            <p id="yyyymmdd">
+                2022年6月29日(水)
+            </p>
+            <p id="time">
+                15:00
+            </p>
+            <p id="climate">
+                <i class="fa-solid fa-temperature-half"></i>
+                20°C
+                <i class="fa-solid fa-sun"></i>
+            </p>
+        </div>
+        <!-- ここまでヘッダー -->
+
+        <div class="kessai">
+
+            <p style="text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            font-size: xx-large;
+            ">お支払い方法の選択</p>
+
+            <!-- 支払方法選択 -->
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="./nyuukin.html">現金</a></td>
+                    <td class="modal-open densi">電子マネー</td>
+                </tr>
+                <tr>
+                    <td class="modal-open qr">QRコード決済</td>
+                </tr>
+            </table>
+
+        </div>
+        <a class="return" style="
+            position: absolute;
+            bottom: 100px;
+            left: 130px;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+            " href="./index.html">戻る</a>
+
+        <div class="modal-container densi">
+            <div class="modal-body">
+                
+                <!-- 閉じるボタン -->
+                <div class="modal-close">×</div>
+
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal-content">
+                    <table class="kessai linkTo">
+                        <tr>
+                            <td>ID</td>
+                            <td>Edy</td>
+                        </tr>
+                        <tr>
+                            <td>Suica</td>
+                            <td>PASMO</td>
+                        </tr>
+                        <tr>
+                            <td>manaca</td>
+                            <td>Toica</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal-container qr">
+            <div class="modal-body">
+                <!-- 閉じるボタン -->
+                <div class="modal-close">×</div>
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal-content">
+                    <p>
+                        QRコードをかざしてください
+
+                    <div style="
+                    background-color: aqua;
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto;
+                    ">
+                        <a href="./complete.html">
+                            QRCode
+                        </a>
+                    </div>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/4b9c35a6cb.js" crossorigin="anonymous"></script>
+    <script src="js/kessai.js"></script>
+</body>
+
+</html>
